@@ -1,5 +1,6 @@
 import React from 'react'
 import './myStyles.css';
+import { useState } from 'react';
 import Conversations from "./Conversations";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
@@ -10,7 +11,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { IconButton } from '@mui/material';
 
 function SideBar() {
-  const [conversation, setConversation] = useState([
+  const [conversations, setConversations] = useState([
     {
       name: "Test#1",
       lastMessage: "Last Message #1",
@@ -28,7 +29,7 @@ function SideBar() {
       lastMessage: "Last Message #3",
       timeStamp: "today",
     }, 
-  ])
+  ]);
   return (
     <div className='sidebar-container'>
       <div className='sb-header'>
@@ -61,7 +62,7 @@ function SideBar() {
       </div>
 
       <div className='sb-conversations'>
-      {Conversations.map((conversation) => {
+      {conversations.map((conversation) => {
         return <Conversations props={conversation} />
       })}
 

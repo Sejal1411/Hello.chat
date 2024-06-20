@@ -2,10 +2,11 @@ import React from 'react'
 import './myStyles.css';
 
 
-function Conversations({props}) {
+function Conversations(props) {
+  console.log(props);
   return (
     <div className='conversation-container'>
-      <p className="con-icon">{props.name[0]}</p>
+      {/* <p className="con-icon">{props=name[0]}</p> */}
       <p className="con-title">{props.name}</p>
       <p className="con-lastMessage">{props.lastMessage}</p>
       <p className="con-timeStamp">{props.timeStamp}</p>
@@ -14,4 +15,4 @@ function Conversations({props}) {
   )
 }
 
-export default Conversations
+export default Conversations;
