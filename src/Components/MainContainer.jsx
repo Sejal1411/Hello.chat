@@ -5,7 +5,6 @@ import Conversations from "./Conversations";
 import ChatArea from "./ChatArea";
 
 
-
 function MainContainer() {
   return (
     <div className='main-container'>
@@ -16,4 +15,4 @@ function MainContainer() {
   )
 }
 
-export default MainContainer
+export default MainContainer;
